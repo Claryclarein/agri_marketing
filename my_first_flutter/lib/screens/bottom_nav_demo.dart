@@ -7,9 +7,9 @@ class BottomNavBarDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: Column(
-          children: [
+          children: const [
             //TITLE TEXT
             Text(
               "Botom Navigation Bar Demo",
@@ -34,7 +34,7 @@ class BottomNavBarDemo extends StatelessWidget {
         onTap: (value) {
           //Respond to item press
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
               icon: Icon(Icons.favorite_outline_outlined), label: "Favourites"),
           BottomNavigationBarItem(icon: Icon(Icons.music_note), label: "Music"),

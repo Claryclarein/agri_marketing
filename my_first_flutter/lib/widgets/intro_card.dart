@@ -31,7 +31,7 @@ class IntroCard extends StatelessWidget {
         child: Center(
           child: Text(
             cardTitle,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
           ),
         ),

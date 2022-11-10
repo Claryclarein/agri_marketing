@@ -12,7 +12,7 @@ class Intro extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: SingleChildScrollView(
@@ -26,7 +26,7 @@ class Intro extends StatelessWidget {
                   }),
                   img: "images/angama.jpg",
                   cardTitle: "Angama Mara"),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               //SECOND CONTAINER
@@ -37,7 +37,7 @@ class Intro extends StatelessWidget {
                   }),
                   img: "images/angama.jpg",
                   cardTitle: "Form Validation"),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               //THIRD CONTAINER
@@ -48,7 +48,7 @@ class Intro extends StatelessWidget {
                   }),
                   img: "images/angama.jpg",
                   cardTitle: "Bottom NavBar Demo"),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               //FORTH CONTAINER

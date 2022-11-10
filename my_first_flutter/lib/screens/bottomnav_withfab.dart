@@ -7,8 +7,8 @@ class BottomnavWithFab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(20),
-        child: Column(children: [
+        padding: const EdgeInsets.all(20),
+        child: Column(children: const [
           //TITLE TEXT
           Text(
             "Bottom Navigation Bar Demo with Fab Center-Docked",
@@ -27,7 +27,7 @@ class BottomnavWithFab extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.amber,
         onPressed: () {},
-        child: Icon(Icons.send),
+        child: const Icon(Icons.send),
       ),
 
       //FAB LOCATION
@@ -36,7 +36,7 @@ class BottomnavWithFab extends StatelessWidget {
       //BOTTOM NAVBAR with FAB
       bottomNavigationBar: BottomAppBar(
         color: Colors.purple,
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         notchMargin: 5,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -44,28 +44,28 @@ class BottomnavWithFab extends StatelessWidget {
           children: [
             IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.menu,
                 color: Colors.white,
               ),
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.search,
                 color: Colors.white,
               ),
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.print,
                 color: Colors.white,
               ),
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.people,
                 color: Colors.white,
               ),

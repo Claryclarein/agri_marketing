@@ -7,11 +7,11 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Adventure"),
+        title: const Text("Adventure"),
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
               color: Colors.white,
             ),
@@ -26,23 +26,23 @@ class MyHomePage extends StatelessWidget {
             Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.3,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage("images/angama.jpg"),
                       fit: BoxFit.cover)),
             ),
             //SPACE
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             //TITLE,SUBTITLE SECTION
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(children: [
                 Expanded(
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text(
                       "Angama Mara",
                       style:
@@ -57,26 +57,26 @@ class MyHomePage extends StatelessWidget {
                     )
                   ],
                 )),
-                Icon(
+                const Icon(
                   Icons.star,
                   color: Colors.red,
                   size: 18,
                 ),
-                Text("41"),
+                const Text("41"),
               ]),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             //ACTIONS SECTION
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 60),
+              padding: const EdgeInsets.symmetric(horizontal: 60),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   //FIRST CHILD
                   Column(
-                    children: [
+                    children: const [
                       Icon(Icons.call, color: Colors.blue),
                       SizedBox(
                         height: 10,
@@ -89,7 +89,7 @@ class MyHomePage extends StatelessWidget {
                   ),
                   //SECOND CHILD
                   Column(
-                    children: [
+                    children: const [
                       Icon(Icons.directions, color: Colors.blue),
                       SizedBox(
                         height: 10,
@@ -102,7 +102,7 @@ class MyHomePage extends StatelessWidget {
                   ),
                   //THIRD CHILD
                   Column(
-                    children: [
+                    children: const [
                       Icon(Icons.share, color: Colors.blue),
                       SizedBox(
                         height: 10,
@@ -118,9 +118,9 @@ class MyHomePage extends StatelessWidget {
             ),
 
             //SPACE
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             //PARAGRAPG SECTION
-            Padding(
+            const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
                     "Angama Mara, Kenya is on 705-hectare site borders the Mara Triangle offering 1.3 km of Rift Valley frontage, its forests and plenty of game directly.Maasai Mara National Reserve, Kenya is within only 26 minutes drive from Angama Mara lodge, home to magnificent African mammals, and fantastic safari adventures await.On the games drives, visitors have the chance to experience new hot air balloon flights, hiking safaris, educational visits to adjacent Maasai villages or just relax at the Angama lodge.")),
@@ -130,7 +130,7 @@ class MyHomePage extends StatelessWidget {
       //FAB
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Icon(
+        child: const Icon(
           Icons.message,
           color: Colors.white,
         ),

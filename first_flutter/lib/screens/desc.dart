@@ -1,6 +1,4 @@
-import 'dart:js';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class Description extends StatelessWidget {
@@ -10,11 +8,11 @@ class Description extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Agri-Marketting"),
+        title: const Text("Agri-Marketting"),
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
               color: Colors.red,
             ),
@@ -24,13 +22,13 @@ class Description extends StatelessWidget {
       body: Container(
         child: ListView(
           children: [
-            Padding(padding: EdgeInsets.all(20)),
+            const Padding(padding: EdgeInsets.all(20)),
             Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 50,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(
+                  image: const AssetImage(
                     "images/farm.jpg",
                   ),
                   fit: BoxFit.cover,
@@ -40,16 +38,16 @@ class Description extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(10),
             ),
             Container(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Text(
                     "KENYA AGRICULTURAL LIVESTOCK RESEARCH ORGANIZATION",
                     style: TextStyle(

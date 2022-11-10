@@ -9,7 +9,7 @@ class FormEx extends StatefulWidget {
 
 class _FormExState extends State<FormEx> {
   //To handle form input changes
-  var _FormKey = GlobalKey<FormState>();
+  final _FormKey = GlobalKey<FormState>();
   var isloading = false;
 
   void _submit() {
@@ -25,20 +25,20 @@ class _FormExState extends State<FormEx> {
     return Scaffold(
       //APP BAR
       appBar: AppBar(
-        title: Text("Form Validation"),
+        title: const Text("Form Validation"),
         leading: IconButton(
-          icon: Icon(Icons.filter_vintage),
+          icon: const Icon(Icons.filter_vintage),
           onPressed: () => Navigator.pop(context),
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         //form
         child: Form(
           key: _FormKey,
           child: Column(
             children: <Widget>[
-              Text(
+              const Text(
                 "Form-Validation In Flutter ",
                 style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
               ),
@@ -47,7 +47,7 @@ class _FormExState extends State<FormEx> {
                 height: MediaQuery.of(context).size.width * 0.1,
               ),
               TextFormField(
-                decoration: InputDecoration(labelText: 'E-Mail'),
+                decoration: const InputDecoration(labelText: 'E-Mail'),
                 keyboardType: TextInputType.emailAddress,
                 onFieldSubmitted: (value) {
                   //Validator
@@ -67,7 +67,7 @@ class _FormExState extends State<FormEx> {
               ),
               //text input
               TextFormField(
-                decoration: InputDecoration(labelText: 'Password'),
+                decoration: const InputDecoration(labelText: 'Password'),
                 keyboardType: TextInputType.emailAddress,
                 onFieldSubmitted: (value) {},
                 obscureText: true,
@@ -82,7 +82,7 @@ class _FormExState extends State<FormEx> {
                 height: MediaQuery.of(context).size.width * 0.1,
               ),
               TextButton(
-                child: Text(
+                child: const Text(
                   "Submit",
                   style: TextStyle(
                     fontSize: 24.0,
