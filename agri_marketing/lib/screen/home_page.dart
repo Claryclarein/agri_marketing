@@ -1,4 +1,5 @@
 import 'package:agri_marketing/screen/login.dart';
+import 'package:agri_marketing/screen/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -50,6 +51,7 @@ class HomePage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  //LOGIN BUTTON
                   Column(
                     children: [
                       Text("Already Have an Account?"),
@@ -76,6 +78,36 @@ class HomePage extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(18),
                                     side: BorderSide(color: Colors.black)))),
                       ),
+                      //SIGNUP BUTTON
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Text("New User? Create Account"),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: ((context) => const Signup())));
+                        },
+                        child: const Text(
+                          "SIGNUP",
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.green),
+                            shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18),
+                                    side: BorderSide(color: Colors.black)))),
+                      ),
+                      //SIGNUP BUTTON
                     ],
                   ),
                 ],
