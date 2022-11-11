@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -23,15 +24,6 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //APP BAR
-      appBar: AppBar(
-        backgroundColor: Colors.greenAccent,
-        title: const Text("Already Have an Account?"),
-        leading: IconButton(
-          icon: const Icon(Icons.filter_vintage),
-          onPressed: () => Navigator.pop(context),
-        ),
-      ),
       body: Padding(
         padding: const EdgeInsets.all(16),
         //form
@@ -40,15 +32,19 @@ class _LoginState extends State<Login> {
           child: Column(
             children: <Widget>[
               const Text(
-                "Form-Validation In Flutter ",
-                style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+                "Fill in your details ",
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.greenAccent),
               ),
               //styling
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.1,
               ),
               TextFormField(
-                decoration: const InputDecoration(labelText: 'E-Mail'),
+                decoration: const InputDecoration(
+                    labelText: 'E-Mail', icon: Icon(Icons.email)),
                 keyboardType: TextInputType.emailAddress,
                 onFieldSubmitted: (value) {
                   //Validator
@@ -64,7 +60,25 @@ class _LoginState extends State<Login> {
               ),
               //box styling
               SizedBox(
-                height: MediaQuery.of(context).size.width * 0.1,
+                height: Get.width * 0.1,
+              ),
+              //phone number
+              TextFormField(
+                decoration: const InputDecoration(
+                  labelText: 'Phone number',
+                  icon: Icon(
+                    Icons.call,
+                  ),
+                ),
+                keyboardType: TextInputType.number,
+                onFieldSubmitted: (value) {},
+                obscureText: true,
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return 'Enter Phone Number';
+                  }
+                  return null;
+                },
               ),
               //text input
               TextFormField(
@@ -87,9 +101,15 @@ class _LoginState extends State<Login> {
                 child: const Text(
                   "Submit",
                   style: TextStyle(
+                    color: Colors.white,
                     fontSize: 24.0,
                   ),
                 ),
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.green),
+                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18),
+                        side: BorderSide(color: Colors.black)))),
                 onPressed: () => _submit(),
               )
             ],

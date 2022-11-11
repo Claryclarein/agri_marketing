@@ -68,6 +68,7 @@ class HomePage extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
+                            color: Colors.white,
                           ),
                         ),
                         style: ButtonStyle(
@@ -97,6 +98,7 @@ class HomePage extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
+                            color: Colors.white,
                           ),
                         ),
                         style: ButtonStyle(
