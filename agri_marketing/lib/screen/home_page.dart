@@ -11,13 +11,16 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       //APPBAR
       appBar: AppBar(
-        title: const Text(
-          "AGRI-MARKETING",
-          style: TextStyle(
-              color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+        title: Center(
+          child: const Text(
+            "AGRISEEDS-MARKETING",
+            style: TextStyle(
+                color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+          ),
         ),
         backgroundColor: Colors.greenAccent,
       ),
+
       //Body
       body: Container(
         child: ListView(
@@ -44,7 +47,8 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.normal),
               ),
             ),
-            // login and signup section
+
+            // LOGIN AND SIGNUP SECTION
 
             Padding(
               padding: EdgeInsets.all(20),
@@ -55,13 +59,14 @@ class HomePage extends StatelessWidget {
                   Column(
                     children: [
                       Text("Already Have an Account?"),
+
+                      //space
                       SizedBox(
                         height: 5,
                       ),
                       TextButton(
                         onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: ((context) => const Login())));
+                          Get.to(() => Login());
                         },
                         child: const Text(
                           "LOGIN",
@@ -73,11 +78,11 @@ class HomePage extends StatelessWidget {
                         ),
                         style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all(Colors.green),
+                                MaterialStateProperty.all(Colors.greenAccent),
                             shape: MaterialStateProperty.all(
                                 RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18),
-                                    side: BorderSide(color: Colors.black)))),
+                              borderRadius: BorderRadius.circular(18),
+                            ))),
                       ),
                       //SIGNUP BUTTON
                     ],
@@ -85,13 +90,14 @@ class HomePage extends StatelessWidget {
                   Column(
                     children: [
                       Text("New User? Create Account"),
+
+                      //space
                       SizedBox(
                         height: 5,
                       ),
                       TextButton(
                         onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: ((context) => const Signup())));
+                          Get.to(() => Signup());
                         },
                         child: const Text(
                           "SIGNUP",
@@ -103,11 +109,11 @@ class HomePage extends StatelessWidget {
                         ),
                         style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all(Colors.green),
+                                MaterialStateProperty.all(Colors.greenAccent),
                             shape: MaterialStateProperty.all(
                                 RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18),
-                                    side: BorderSide(color: Colors.black)))),
+                              borderRadius: BorderRadius.circular(18),
+                            ))),
                       ),
                       //SIGNUP BUTTON
                     ],
