@@ -95,6 +95,7 @@ class HomePage extends StatelessWidget {
                       SizedBox(
                         height: 5,
                       ),
+                      //signup button
                       TextButton(
                         onPressed: () {
                           Get.to(() => Signup());
@@ -116,6 +117,21 @@ class HomePage extends StatelessWidget {
                             ))),
                       ),
                       //SIGNUP BUTTON
+                      Container(
+                        width: Get.width * .2,
+                        height: 20,
+                        decoration: BoxDecoration(
+                          color: Colors.greenAccent,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Text(
+                          "CANCEL",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                      ),
                     ],
                   ),
                 ],

@@ -40,7 +40,7 @@ class _LoginState extends State<Login> {
               ),
               //styling
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.1,
+                height: 1,
               ),
               TextFormField(
                 decoration: const InputDecoration(
@@ -60,7 +60,7 @@ class _LoginState extends State<Login> {
               ),
               //box styling
               SizedBox(
-                height: Get.width * 0.1,
+                height: 1,
               ),
               //phone number
               TextFormField(
@@ -80,11 +80,14 @@ class _LoginState extends State<Login> {
                   return null;
                 },
               ),
+              SizedBox(
+                height: 1,
+              ),
               //text input
               TextFormField(
                 decoration: const InputDecoration(
-                    labelText: 'Password', icon: Icon(Icons.password)),
-                keyboardType: TextInputType.emailAddress,
+                    labelText: 'Password', icon: Icon(Icons.lock)),
+                keyboardType: TextInputType.visiblePassword,
                 onFieldSubmitted: (value) {},
                 obscureText: true,
                 validator: (value) {
@@ -95,21 +98,22 @@ class _LoginState extends State<Login> {
                 },
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.width * 0.1,
+                height: 10,
               ),
               TextButton(
                 child: const Text(
-                  "Submit",
+                  "LOGIN",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 24.0,
                   ),
                 ),
                 style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.green),
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.greenAccent),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18),
-                        side: BorderSide(color: Colors.black)))),
+                      borderRadius: BorderRadius.circular(18),
+                    ))),
                 onPressed: () => _submit(),
               )
             ],
