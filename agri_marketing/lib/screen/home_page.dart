@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
                 color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
           ),
         ),
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.green,
       ),
 
       //Body
@@ -55,7 +55,6 @@ class HomePage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  //LOGIN BUTTON
                   Column(
                     children: [
                       Text("Already Have an Account?"),
@@ -64,9 +63,12 @@ class HomePage extends StatelessWidget {
                       SizedBox(
                         height: 5,
                       ),
+
+                      //login button
                       TextButton(
                         onPressed: () {
-                          Get.to(() => Login());
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: ((context) => Login())));
                         },
                         child: const Text(
                           "LOGIN",
@@ -77,14 +79,15 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.greenAccent),
-                            shape: MaterialStateProperty.all(
-                                RoundedRectangleBorder(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.green),
+                          shape: MaterialStateProperty.all(
+                            RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18),
-                            ))),
-                      ),
-                      //SIGNUP BUTTON
+                            ),
+                          ),
+                        ),
+                      )
                     ],
                   ),
                   Column(
@@ -95,10 +98,12 @@ class HomePage extends StatelessWidget {
                       SizedBox(
                         height: 5,
                       ),
+
                       //signup button
                       TextButton(
                         onPressed: () {
-                          Get.to(() => Signup());
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: ((context) => Signup())));
                         },
                         child: const Text(
                           "SIGNUP",
@@ -110,28 +115,13 @@ class HomePage extends StatelessWidget {
                         ),
                         style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all(Colors.greenAccent),
+                                MaterialStateProperty.all(Colors.green),
                             shape: MaterialStateProperty.all(
                                 RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18),
                             ))),
                       ),
                       //SIGNUP BUTTON
-                      Container(
-                        width: Get.width * .2,
-                        height: 20,
-                        decoration: BoxDecoration(
-                          color: Colors.greenAccent,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Text(
-                          "CANCEL",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20),
-                        ),
-                      ),
                     ],
                   ),
                 ],

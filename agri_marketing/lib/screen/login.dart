@@ -1,3 +1,4 @@
+import 'package:agri_marketing/screen/order.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -36,7 +37,7 @@ class _LoginState extends State<Login> {
                 style: TextStyle(
                     fontSize: 24.0,
                     fontWeight: FontWeight.bold,
-                    color: Colors.greenAccent),
+                    color: Colors.green),
               ),
               //styling
               SizedBox(
@@ -101,6 +102,10 @@ class _LoginState extends State<Login> {
                 height: 10,
               ),
               TextButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: ((context) => Order())));
+                },
                 child: const Text(
                   "LOGIN",
                   style: TextStyle(
@@ -109,12 +114,10 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(Colors.greenAccent),
+                    backgroundColor: MaterialStateProperty.all(Colors.green),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18),
                     ))),
-                onPressed: () => _submit(),
               )
             ],
           ),

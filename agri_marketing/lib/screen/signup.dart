@@ -36,7 +36,7 @@ class _SignupState extends State<Signup> {
                 style: TextStyle(
                     fontSize: 24.0,
                     fontWeight: FontWeight.bold,
-                    color: Colors.greenAccent),
+                    color: Colors.green),
               ),
               //styling
               SizedBox(
@@ -143,8 +143,7 @@ class _SignupState extends State<Signup> {
                   ),
                 ),
                 style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(Colors.greenAccent),
+                    backgroundColor: MaterialStateProperty.all(Colors.green),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18),
                     ))),
