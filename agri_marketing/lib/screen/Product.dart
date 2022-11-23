@@ -1,5 +1,10 @@
 import 'dart:ui';
 
+import 'package:agri_marketing/screen/Order.dart';
+import 'package:agri_marketing/screen/cereal.dart';
+import 'package:agri_marketing/screen/fruit_tree.dart';
+import 'package:agri_marketing/screen/oil_seed.dart';
+import 'package:agri_marketing/screen/tuber.dart';
 import 'package:agri_marketing/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -44,14 +49,33 @@ class Product extends StatelessWidget {
               children: [
                 Expanded(
                   child: ProductCard(
-                      img: "images/groundnuts.jpg", title: "Oil Seeds"),
+                    img: "images/sorghum seeds.jpg",
+                    title: "Cereals",
+                    onClick: (() {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: ((context) => Cereal()),
+                        ),
+                      );
+                    }),
+                  ),
                 ),
+                //space
                 SizedBox(
                   width: 10,
                 ),
                 Expanded(
-                  child:
-                      ProductCard(img: "images/sorghum.jpg", title: "Cereals"),
+                  child: ProductCard(
+                    img: "images/gnuts.jpg",
+                    title: "Oil Seeds",
+                    onClick: (() {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: ((context) => Oilseed()),
+                        ),
+                      );
+                    }),
+                  ),
                 ),
               ],
             ),
@@ -63,14 +87,33 @@ class Product extends StatelessWidget {
               children: [
                 Expanded(
                   child: ProductCard(
-                      img: "images/groundnuts.jpg", title: "Stem Tubers"),
+                    img: "images/mango.jpg",
+                    title: "Fruit Tree Seedlings",
+                    onClick: (() {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: ((context) => FruitTree()),
+                        ),
+                      );
+                    }),
+                  ),
                 ),
+                //space
                 SizedBox(
                   width: 10,
                 ),
                 Expanded(
                   child: ProductCard(
-                      img: "images/sorghum.jpg", title: "Tree seedlings"),
+                    img: "images/cassavacuttings.jpg",
+                    title: "Tuber crops",
+                    onClick: (() {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: ((context) => Tuber()),
+                        ),
+                      );
+                    }),
+                  ),
                 ),
               ],
             ),
@@ -79,28 +122,35 @@ class Product extends StatelessWidget {
             ),
 
             //TextButton
-            TextButton(
-              onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: ((context) => Product())));
-              },
-              child: Text(
-                "Proceed",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16),
-              ),
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.green),
-                shape: MaterialStateProperty.all(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
+            Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(40),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: ((context) => Order())));
+                  },
+                  child: Text(
+                    "Proceed",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16),
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.green),
+                    shape: MaterialStateProperty.all(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
+              ],
             ),
           ],
         ),

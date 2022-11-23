@@ -1,3 +1,4 @@
+import 'package:agri_marketing/screen/Product.dart';
 import 'package:agri_marketing/screen/order.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -103,8 +104,8 @@ class _LoginState extends State<Login> {
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: ((context) => Order())));
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: ((context) => Product())));
                 },
                 child: const Text(
                   "LOGIN",
