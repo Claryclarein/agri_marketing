@@ -9,6 +9,7 @@ class Tuber extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.green,
         title: TextField(
           decoration: InputDecoration(
             enabledBorder: OutlineInputBorder(
