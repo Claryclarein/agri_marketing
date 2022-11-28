@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "477848713046",
+    "project_id": "agriseeds-marketing",
+    "storage_bucket": "agriseeds-marketing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477848713046:android:b8ed8b475fe196e737c8f7",
+        "android_client_info": {
+          "package_name": "com.example.agri_marketing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477848713046-kkp7ndh7ap621s8k6hbom1cgvekpsb8g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc4ZWjumVcexTcHR6Th1khL7ikMCJoryE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477848713046-kkp7ndh7ap621s8k6hbom1cgvekpsb8g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
