@@ -1,5 +1,7 @@
 import 'package:agri_marketing/screen/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,6 +14,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //here
+      navigatorObservers: [FlutterSmartDialog.observer],
+//here
+      builder: FlutterSmartDialog.init(),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(

@@ -39,7 +39,12 @@ dependencies:
   get: ^4.6.5
   google_fonts: ^3.0.1
   carousel_slider: ^4.1.1
-
+  firebase_core: ^2.3.0
+  firebase_database: ^10.0.6
+  flutter_smart_dialog: ^4.7.1
+  firebase_auth: ^4.1.4
+  cloud_firestore: ^4.1.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
